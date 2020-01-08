@@ -1,0 +1,24 @@
+function XO(str) {
+    //changing string to lowercase
+    str = str.toLowerCase();
+
+    //put the string into an array
+    var arrayOfXsAndOs = str.split("");
+
+    //counting the x's
+    var countX = arrayOfXsAndOs.reduce(function(n, val) {
+        return n + (val === 'x');
+      }, 0);
+      
+    //counting the o's
+    var countO = arrayOfXsAndOs.reduce(function(n, val) {
+        return n + (val === 'o');
+      }, 0);
+    
+    //checking if x's equate to o's in string
+    if ( countX == countO ) {
+      return true;
+    } else {
+      return false;
+    }
+}
